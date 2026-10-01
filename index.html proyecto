@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beato Enrique Canadell Quintana</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo escolapio.png" alt="Escudo Escolapio" class="logo-img">
+            <span class="tag-escolapio">3.º H — Equipo 15</span>
+            <h1>Beato Enrique Canadell Quintana</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#biografia">Biografía</a></li>
+                <li><a href="#martirio">Testimonio</a></li>
+                <li><a href="#legado">Legado</a></li>
+                <li><a href="#trivia">Trivia</a></li>
+                <li><a href="pages/formulario.html">Formulario</a></li>
+                <li><a href="#fuentes">Fuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <img src="img/Beato Enrique Canadell Quintana.jpg" alt="Beato Enrique Canadell Quintana" class="hero-portrait">
+                <h2>Sacerdote, Educador Escolapio y Mártir</h2>
+                <p class="hero-quote">"Dedicó su vida a la enseñanza y a la fe, protegió a los demás y permaneció fiel a su vocación hasta el final."</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#biografia" class="btn-primary">Conocer su Historia</a>
+                    <a href="pages/formulario.html" class="btn-secondary">Ir al Formulario de Ingreso</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIOGRAFÍA Y MISIÓN -->
+        <section id="biografia" class="container">
+            <h2 class="section-title">Vida y Misión Educativa</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <img src="img/vocacion.jpg" alt="Vocación escolapia" class="card-img">
+                    <div class="card-body">
+                        <h3>Orígenes y Vocación</h3>
+                        <p>Enrique Canadell Quintana nació el 29 de junio de 1890 en Olot, Gerona, España. Ingresó en la Orden de las Escuelas Pías y profesó como escolapio en 1907, en Moyá. En 1913 fue ordenado sacerdote en Lérida.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/docencia.jpg" alt="Labor docente" class="card-img">
+                    <div class="card-body">
+                        <h3>Labor Docente</h3>
+                        <p>Ejerció como sacerdote y educador en los colegios escolapios de Mataró, Balaguer y Barcelona. Fue reconocido por su profunda fe, su devoción a la Eucaristía y su predicación clara y comprometida. A través de la enseñanza colaboró con la misión escolapia de educar a los jóvenes y transmitir la fe cristiana.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/docencia.jpg" alt="Educación y servicio en las Escuelas Pías" class="card-img">
+                    <div class="card-body">
+                        <h3>Responsabilidades en el Colegio</h3>
+                        <p>En 1936 se encontraba en el Colegio de Nuestra Señora de las Escuelas Pías de Barcelona, donde se desempeñaba como vicerrector, secretario, profesor, sacerdote y predicador. Su trabajo estuvo dedicado a la educación y a la vida religiosa.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- TESTIMONIO Y MARTIRIO -->
+        <section id="martirio" class="container bg-light">
+            <h2 class="section-title">Testimonio y Martirio (1936)</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Persecución y Refugio</h4>
+                    <p>El 20 de julio de 1936, debido a la persecución religiosa en España, tuvo que abandonar el colegio. Primero se refugió en la casa de una familia amiga, pero decidió marcharse para no ponerla en peligro. Consiguió un salvoconducto por su condición de maestro y viajó hasta Olot, donde se alojó en la casa de su hermana.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Fe y Fidelidad a sus Compañeros</h4>
+                    <p>Durante su refugio se dedicó a la oración y a la lectura, confiando su vida a Dios. En la noche del 17 de agosto de 1936, unos milicianos registraron la casa. Enrique reconoció que era sacerdote y religioso escolapio. Fue detenido y maltratado para que revelara dónde se encontraban otros sacerdotes, pero no los traicionó.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Entrega Final</h4>
+                    <p>Fue fusilado el 17 de agosto de 1936 en un lugar llamado Clot de Canadell o Clot de Paretaire, cerca de Castellfollit de la Roca, Gerona. Según un testimonio, uno de los milicianos afirmó que debieron matarlo rápidamente porque Enrique estaba consiguiendo convencerlos con sus palabras. Permaneció fiel a su fe y a su vocación hasta el final.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEGADO Y BEATIFICACIÓN -->
+        <section id="legado" class="container">
+            <h2 class="section-title">Beatificación y Legado</h2>
+            <div class="card-single card-with-image">
+                <img src="img/beatificacion.jpg" alt="Beatificación de los mártires escolapios" class="legacy-img">
+                <div>
+                    <h3>Reconocimiento de su Martirio</h3>
+                    <p>El papa Juan Pablo II beatificó a Enrique Canadell Quintana el 1 de octubre de 1995, junto con otros doce escolapios asesinados durante la persecución religiosa de 1936. La Iglesia reconoció oficialmente su martirio y autorizó su veneración. Su legado permanece en su trabajo como educador, su compromiso con las Escuelas Pías y la firmeza de su fe. Su vida representa la valentía, la vocación educativa, la protección de los demás, la fidelidad a sus compañeros, el perdón y la confianza en Dios.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRIVIA INTERACTIVA (JAVASCRIPT) -->
+        <section id="trivia" class="container bg-accent">
+            <h2 class="section-title">¿Cuánto aprendiste sobre el Beato Enrique Canadell Quintana?</h2>
+            <div id="quiz-container" class="quiz-box">
+                <p id="quiz-question">Cargando pregunta...</p>
+                <div id="quiz-options" class="options-container"></div>
+                <button id="btn-next" class="btn-secondary" style="display: none;">Siguiente Pregunta</button>
+                <div id="quiz-score" class="score-box"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE REGISTRO / FORMULARIO -->
+        <section class="container" style="text-align: center;">
+            <h2 class="section-title">¡Queremos conocerte!</h2>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Completa tus datos y pasatiempos en nuestro formulario de visitantes.</p>
+            <a href="pages/formulario.html" class="btn-primary">Completar Formulario de Ingreso</a>
+        </section>
+
+        <!-- FUENTES CONSULTADAS -->
+        <section id="fuentes" class="container">
+            <h2 class="section-title">Fuentes Consultadas</h2>
+            <ul class="sources-list">
+                <li><strong>Documento de referencia:</strong> Trabajo Integrador de Beato Enrique Canadell Quintana.</li>
+                <li><strong>Contenido biográfico:</strong> Apartados de vida, obra y testimonio de vida del documento.</li>
+                <li><strong>Legado y beatificación:</strong> Apartados de legado y condición dentro de la Iglesia y de las Escuelas Pías del documento.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto Integrador: Taller de Informática y Catequesis — 3.º H (Equipo 15)</p>
+       <p>Integrantes: Ayelen Maguiña y Farid Niño</p>
+        <p>Escuelas Pías | <a href="https://github.com" target="_blank" id="github-link">Repositorio GitHub</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
