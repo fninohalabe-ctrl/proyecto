@@ -4,13 +4,277 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beato Enrique Canadell Quintana</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+    *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    }
+    html{
+    scroll-behavior:smooth;
+    }
+    body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    background-color:#f7f5f0;
+    color:#2b2b2b;
+    line-height:1.6;
+    }
+    .navbar{
+    background-color:#1f3a68;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .logo{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    }
+    .logo-img{
+    height:50px;
+    }
+    .tag-escolapio{
+    background-color:#c9a227;
+    color:#1f3a68;
+    font-size:0.8rem;
+    font-weight:bold;
+    padding:4px 10px;
+    border-radius:20px;
+    }
+    .logo h1{
+    font-size:1.3rem;
+    }
+    nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    }
+    nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    }
+    nav a:hover{
+    color:#c9a227;
+    }
+    .hero{
+    background-color:#1f3a68;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    }
+    .hero-content{
+    max-width:800px;
+    margin:0 auto;
+    }
+    .hero-portrait{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #c9a227;
+    margin-bottom:20px;
+    }
+    .hero h2{
+    font-size:2rem;
+    margin-bottom:15px;
+    }
+    .hero-quote{
+    font-style:italic;
+    font-size:1.15rem;
+    margin-bottom:30px;
+    }
+    .btn-primary{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1rem;
+    border:2px solid #c9a227;
+    background-color:#c9a227;
+    color:#1f3a68;
+    cursor:pointer;
+    }
+    .btn-secondary{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1rem;
+    border:2px solid #c9a227;
+    background-color:white;
+    color:#1f3a68;
+    cursor:pointer;
+    }
+    .btn-primary:hover{
+    background-color:white;
+    }
+    .btn-secondary:hover{
+    background-color:#c9a227;
+    }
+    .container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:50px 20px;
+    }
+    .section-title{
+    text-align:center;
+    color:#1f3a68;
+    font-size:2rem;
+    margin-bottom:40px;
+    border-bottom:4px solid #c9a227;
+    padding-bottom:10px;
+    }
+    .bg-light{
+    background-color:white;
+    border-radius:10px;
+    }
+    .bg-accent{
+    background-color:#fdf6e3;
+    border-radius:10px;
+    }
+    .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    }
+    .card{
+    background-color:white;
+    border:2px solid #dddddd;
+    border-radius:10px;
+    overflow:hidden;
+    }
+    .card-img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    }
+    .card-body{
+    padding:20px;
+    }
+    .card-body h3{
+    color:#1f3a68;
+    margin-bottom:10px;
+    }
+    .timeline{
+    border-left:4px solid #c9a227;
+    padding-left:30px;
+    max-width:800px;
+    margin:0 auto;
+    }
+    .timeline-item{
+    margin-bottom:35px;
+    }
+    .timeline-item h4{
+    color:#1f3a68;
+    font-size:1.2rem;
+    margin-bottom:8px;
+    }
+    .card-single{
+    background-color:white;
+    border:2px solid #dddddd;
+    border-radius:10px;
+    padding:30px;
+    max-width:900px;
+    margin:0 auto;
+    }
+    .card-with-image{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    }
+    .legacy-img{
+    width:300px;
+    max-width:100%;
+    border-radius:10px;
+    object-fit:cover;
+    }
+    .card-single h3{
+    color:#1f3a68;
+    margin-bottom:10px;
+    }
+    .quiz-box{
+    background-color:white;
+    max-width:650px;
+    margin:0 auto;
+    padding:30px;
+    border:2px solid #dddddd;
+    border-radius:10px;
+    text-align:center;
+    }
+    #quiz-question{
+    font-size:1.2rem;
+    font-weight:bold;
+    margin-bottom:20px;
+    }
+    .options-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:20px;
+    }
+    .options-container button{
+    padding:12px;
+    border:2px solid #dddddd;
+    border-radius:8px;
+    background-color:white;
+    font-size:1rem;
+    cursor:pointer;
+    }
+    .options-container button:hover{
+    border-color:#1f3a68;
+    background-color:#eef2f9;
+    }
+    .score-box{
+    margin-top:15px;
+    font-weight:bold;
+    font-size:1.1rem;
+    color:#1f3a68;
+    }
+    .sources-list{
+    list-style:none;
+    max-width:800px;
+    margin:0 auto;
+    }
+    .sources-list li{
+    background-color:white;
+    padding:15px 20px;
+    margin-bottom:10px;
+    border-left:4px solid #c9a227;
+    border-radius:6px;
+    }
+    footer{
+    background-color:#1f3a68;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:40px;
+    }
+    footer p{
+    margin:5px 0;
+    }
+    footer a{
+    color:#c9a227;
+    }
+    </style>
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo">
-            <img src="img/logo escolapio.png" alt="Escudo Escolapio" class="logo-img">
+            <img src="logo escolapio.png" alt="Escudo Escolapio" class="logo-img">
             <span class="tag-escolapio">3.º H — Equipo 15</span>
             <h1>Beato Enrique Canadell Quintana</h1>
         </div>
@@ -20,32 +284,30 @@
                 <li><a href="#martirio">Testimonio</a></li>
                 <li><a href="#legado">Legado</a></li>
                 <li><a href="#trivia">Trivia</a></li>
-                <li><a href="pages/formulario.html">Formulario</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
                 <li><a href="#fuentes">Fuentes</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- HERO SECTION -->
         <section class="hero">
             <div class="hero-content">
-                <img src="img/Beato Enrique Canadell Quintana.jpg" alt="Beato Enrique Canadell Quintana" class="hero-portrait">
+                <img src="Beato Enrique Canadell Quintana.jpg" alt="Beato Enrique Canadell Quintana" class="hero-portrait">
                 <h2>Sacerdote, Educador Escolapio y Mártir</h2>
                 <p class="hero-quote">"Dedicó su vida a la enseñanza y a la fe, protegió a los demás y permaneció fiel a su vocación hasta el final."</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="#biografia" class="btn-primary">Conocer su Historia</a>
-                    <a href="pages/formulario.html" class="btn-secondary">Ir al Formulario de Ingreso</a>
+                    <a href="formulario.html" class="btn-secondary">Ir al Formulario de Ingreso</a>
                 </div>
             </div>
         </section>
 
-        <!-- BIOGRAFÍA Y MISIÓN -->
         <section id="biografia" class="container">
             <h2 class="section-title">Vida y Misión Educativa</h2>
             <div class="cards-grid">
                 <article class="card">
-                    <img src="img/vocacion.jpg" alt="Vocación escolapia" class="card-img">
+                    <img src="vocacion.jpg" alt="Vocación escolapia" class="card-img">
                     <div class="card-body">
                         <h3>Orígenes y Vocación</h3>
                         <p>Enrique Canadell Quintana nació el 29 de junio de 1890 en Olot, Gerona, España. Ingresó en la Orden de las Escuelas Pías y profesó como escolapio en 1907, en Moyá. En 1913 fue ordenado sacerdote en Lérida.</p>
@@ -53,7 +315,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="img/docencia.jpg" alt="Labor docente" class="card-img">
+                    <img src="docencia.jpg" alt="Labor docente" class="card-img">
                     <div class="card-body">
                         <h3>Labor Docente</h3>
                         <p>Ejerció como sacerdote y educador en los colegios escolapios de Mataró, Balaguer y Barcelona. Fue reconocido por su profunda fe, su devoción a la Eucaristía y su predicación clara y comprometida. A través de la enseñanza colaboró con la misión escolapia de educar a los jóvenes y transmitir la fe cristiana.</p>
@@ -61,7 +323,7 @@
                 </article>
 
                 <article class="card">
-                    <img src="img/docencia.jpg" alt="Educación y servicio en las Escuelas Pías" class="card-img">
+                    <img src="docencia.jpg" alt="Educación y servicio en las Escuelas Pías" class="card-img">
                     <div class="card-body">
                         <h3>Responsabilidades en el Colegio</h3>
                         <p>En 1936 se encontraba en el Colegio de Nuestra Señora de las Escuelas Pías de Barcelona, donde se desempeñaba como vicerrector, secretario, profesor, sacerdote y predicador. Su trabajo estuvo dedicado a la educación y a la vida religiosa.</p>
@@ -70,7 +332,6 @@
             </div>
         </section>
 
-        <!-- TESTIMONIO Y MARTIRIO -->
         <section id="martirio" class="container bg-light">
             <h2 class="section-title">Testimonio y Martirio (1936)</h2>
             <div class="timeline">
@@ -89,11 +350,10 @@
             </div>
         </section>
 
-        <!-- LEGADO Y BEATIFICACIÓN -->
         <section id="legado" class="container">
             <h2 class="section-title">Beatificación y Legado</h2>
             <div class="card-single card-with-image">
-                <img src="img/beatificacion.jpg" alt="Beatificación de los mártires escolapios" class="legacy-img">
+                <img src="beatificacion.jpg" alt="Beatificación de los mártires escolapios" class="legacy-img">
                 <div>
                     <h3>Reconocimiento de su Martirio</h3>
                     <p>El papa Juan Pablo II beatificó a Enrique Canadell Quintana el 1 de octubre de 1995, junto con otros doce escolapios asesinados durante la persecución religiosa de 1936. La Iglesia reconoció oficialmente su martirio y autorizó su veneración. Su legado permanece en su trabajo como educador, su compromiso con las Escuelas Pías y la firmeza de su fe. Su vida representa la valentía, la vocación educativa, la protección de los demás, la fidelidad a sus compañeros, el perdón y la confianza en Dios.</p>
@@ -101,7 +361,6 @@
             </div>
         </section>
 
-        <!-- TRIVIA INTERACTIVA (JAVASCRIPT) -->
         <section id="trivia" class="container bg-accent">
             <h2 class="section-title">¿Cuánto aprendiste sobre el Beato Enrique Canadell Quintana?</h2>
             <div id="quiz-container" class="quiz-box">
@@ -112,14 +371,12 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE REGISTRO / FORMULARIO -->
         <section class="container" style="text-align: center;">
             <h2 class="section-title">¡Queremos conocerte!</h2>
-            <p style="margin-bottom: 20px; color: var(--text-muted);">Completa tus datos y pasatiempos en nuestro formulario de visitantes.</p>
-            <a href="pages/formulario.html" class="btn-primary">Completar Formulario de Ingreso</a>
+            <p style="margin-bottom: 20px; color: #6b6b6b;">Completa tus datos y pasatiempos en nuestro formulario de visitantes.</p>
+            <a href="formulario.html" class="btn-primary">Completar Formulario de Ingreso</a>
         </section>
 
-        <!-- FUENTES CONSULTADAS -->
         <section id="fuentes" class="container">
             <h2 class="section-title">Fuentes Consultadas</h2>
             <ul class="sources-list">
@@ -132,10 +389,10 @@
 
     <footer>
         <p>Proyecto Integrador: Taller de Informática y Catequesis — 3.º H (Equipo 15)</p>
-       <p>Integrantes: Ayelen Maguiña y Farid Niño</p>
+        <p>Integrantes: Ayelen Maguiña y Farid Niño</p>
         <p>Escuelas Pías | <a href="https://github.com" target="_blank" id="github-link">Repositorio GitHub</a></p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html
