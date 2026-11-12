@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro - Beato Enrique Canadell Quintana</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+        html{
+            scroll-behavior:smooth;
+        }
+        body{
+            font-family:'Segoe UI', Arial, sans-serif;
+            background-color:#f7f5f0;
+            color:#2b2b2b;
+            line-height:1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar{
+            background-color:#1f3a68;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:15px;
+            padding:15px 40px;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow:0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .logo{
+            display:flex;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:12px;
+        }
+        .logo-img{
+            height:50px;
+        }
+        .tag-escolapio{
+            background-color:#c9a227;
+            color:#1f3a68;
+            font-size:0.8rem;
+            font-weight:bold;
+            padding:4px 10px;
+            border-radius:20px;
+        }
+        .logo h1{
+            font-size:1.3rem;
+        }
+        nav ul{
+            list-style:none;
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+        }
+        nav a:hover{
+            color:#c9a227;
+        }
+        .container{
+            max-width:700px;
+            margin:40px auto;
+            padding:40px 20px;
+            flex: 1;
+            width: 100%;
+        }
+        .section-title{
+            text-align:center;
+            color:#1f3a68;
+            font-size:2rem;
+            margin-bottom:30px;
+            border-bottom:4px solid #c9a227;
+            padding-bottom:10px;
+        }
+        .card-single{
+            background-color:white;
+            border:2px solid #dddddd;
+            border-radius:10px;
+            padding:35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .btn-volver-card {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid #1f3a68;
+            background-color: transparent;
+            color: #1f3a68;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .btn-volver-card:hover {
+            background-color: #1f3a68;
+            color: white;
+        }
+        .form-group{
+            margin-bottom:20px;
+        }
+        label{
+            display:block;
+            font-weight:600;
+            color:#1f3a68;
+            margin-bottom:8px;
+            font-size: 1rem;
+        }
+        input[type="text"],
+        input[type="number"]{
+            width:100%;
+            padding:12px 15px;
+            border:2px solid #dddddd;
+            border-radius:8px;
+            font-size:1rem;
+            font-family:inherit;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus{
+            outline:none;
+            border-color:#1f3a68;
+        }
+        .btn-primary{
+            display:block;
+            width: 100%;
+            padding:12px 28px;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:bold;
+            font-size:1rem;
+            border:2px solid #c9a227;
+            background-color:#c9a227;
+            color:#1f3a68;
+            cursor:pointer;
+            text-align: center;
+            transition: background-color 0.2s, color 0.2s;
+            margin-top: 25px;
+        }
+        .btn-primary:hover{
+            background-color:#1f3a68;
+            color: white;
+            border-color: #1f3a68;
+        }
+        .result-box{
+            display:none;
+            text-align:center;
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        .result-box h3{
+            color:#1f3a68;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .user-summary{
+            background-color: #f7f5f0;
+            border-left: 4px solid #1f3a68;
+            text-align: left;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .user-summary p{
+            margin: 5px 0;
+            color: #2b2b2b;
+        }
+        .points-badge{
+            background-color: #fdf6e3;
+            border: 2px dashed #c9a227;
+            color: #1f3a68;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .points-badge span{
+            color: #c9a227;
+            background-color: #1f3a68;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 1.4rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        footer{
+            background-color:#1f3a68;
+            color:white;
+            text-align:center;
+            padding:30px 20px;
+            margin-top:auto;
+        }
+        footer p{
+            margin:5px 0;
+        }
+        footer a{
+            color:#c9a227;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="logo escolapio.png" alt="Escudo Escolapio" class="logo-img">
+            <span class="tag-escolapio">3.º H — Equipo 15</span>
+            <h1>Beato Enrique Canadell Quintana</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#biografia">Biografía</a></li>
+                <li><a href="index.html#martirio">Testimonio</a></li>
+                <li><a href="index.html#legado">Legado</a></li>
+                <li><a href="index.html#trivia">Trivia</a></li>
+                <li><a href="formulario.html" style="color: #c9a227;">Formulario</a></li>
+                <li><a href="index.html#fuentes">Fuentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Formulario de Registro y Puntos de Fe</h2>
+        
+        <div class="card-single">
+            <a href="index.html" class="btn-volver-card">← Volver al inicio</a>
+
+            <div id="form-wrapper">
+                <p style="margin-bottom: 25px; text-align: center; color: #6b6b6b;">Por favor, ingresa tus datos personales y tu pasatiempo favorito para sumarte al registro de la comunidad.</p>
+                
+                <form id="faithForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" required placeholder="Ej. Ayelen Maguiña o Farid Niño">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" required min="1" max="120" placeholder="Ej. 16">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hobby">Hobby o Pasatiempo:</label>
+                        <input type="text" id="hobby" required placeholder="Ej. Leer, tocar un instrumento, programar...">
+                    </div>
+
+                    <button type="submit" class="btn-primary">Enviar y Calcular Puntos de Fe</button>
+                </form>
+            </div>
+
+            <div id="result-wrapper" class="result-box">
+                <h3>¡Registro Exitoso en la Comunidad!</h3>
+                <p style="margin-bottom: 20px; color: #6b6b6b;">Tus datos han sido procesados correctamente.</p>
+                
+                <div class="user-summary">
+                    <p><strong>Nombre:</strong> <span id="resNombre"></span></p>
+                    <p><strong>Edad:</strong> <span id="resEdad"></span> años</p>
+                    <p><strong>Hobby:</strong> <span id="resHobby"></span></p>
+                </div>
+
+                <div class="points-badge">
+                    ✨ ¡Has ganado <span id="resPuntos">0</span> Puntos de Fe! ✨
+                </div>
+
+                <button type="button" class="btn-primary" onclick="reiniciarFormulario()">Registrar otra persona</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Proyecto Integrador: Taller de Informática y Catequesis — 3.º H (Equipo 15)</p>
+        <p>Integrantes: Ayelen Maguiña y Farid Niño</p>
+        <p>Escuelas Pías | <a href="https://github.com" target="_blank">Repositorio GitHub</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('faithForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const edad = parseInt(document.getElementById('edad').value);
+            const hobby = document.getElementById('hobby').value;
+
+            const puntosFe = 100 + (edad * 4) + Math.floor(Math.random() * 50);
+
+            document.getElementById('resNombre').textContent = nombre;
+            document.getElementById('resEdad').textContent = edad;
+            document.getElementById('resHobby').textContent = hobby;
+            document.getElementById('resPuntos').textContent = puntosFe;
+
+            document.getElementById('form-wrapper').style.display = 'none';
+            document.getElementById('result-wrapper').style.display = 'block';
+        });
+
+        function reiniciarFormulario() {
+            document.getElementById('faithForm').reset();
+            document.getElementById('result-wrapper').style.display = 'none';
+            document.getElementById('form-wrapper').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
